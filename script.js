@@ -242,7 +242,7 @@ btnLogin.addEventListener('click', e => {
   e.preventDefault();
 
   currentAccount = accounts.find(
-    acc => acc.userName === inputLoginUsername.value
+    acc => acc.userName === inputLoginUsername.value.toLowerCase()
   );
   if (currentAccount?.pin === +inputLoginPin.value) {
     labelWelcome.textContent = `Welcome back ${
